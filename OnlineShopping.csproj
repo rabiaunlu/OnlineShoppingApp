@@ -1,0 +1,382 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6741236-6AAD-4761-AC7C-40E970435940}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineShopping</RootNamespace>
+    <AssemblyName>OnlineShopping</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44324</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\camera1.jpg" />
+    <Content Include="Content\Images\pc1.jpg" />
+    <Content Include="Content\Images\pc2.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Magaza\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Magaza\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Magaza\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Magaza\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Magaza\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Magaza\compair.html" />
+    <Content Include="Magaza\components.html" />
+    <Content Include="Magaza\contact.html" />
+    <Content Include="Magaza\faq.html" />
+    <Content Include="Magaza\forgetpass.html" />
+    <Content Include="Magaza\hasowebindex.html" />
+    <Content Include="Magaza\index.html" />
+    <Content Include="Magaza\legal_notice.html" />
+    <Content Include="Magaza\login.html" />
+    <Content Include="Magaza\normal.html" />
+    <Content Include="Magaza\products.html" />
+    <Content Include="Magaza\product_details.html" />
+    <Content Include="Magaza\product_summary.html" />
+    <Content Include="Magaza\register.html" />
+    <Content Include="Magaza\special_offer.html" />
+    <Content Include="Magaza\tac.html" />
+    <Content Include="Magaza\themes\amelia\bootstrap.css" />
+    <Content Include="Magaza\themes\amelia\bootstrap.min.css" />
+    <Content Include="Magaza\themes\bootshop\bootstrap.min.css" />
+    <Content Include="Magaza\themes\businessltd\bootstrap.min.css" />
+    <Content Include="Magaza\themes\cerulean\bootstrap.min.css" />
+    <Content Include="Magaza\themes\css\base.css" />
+    <Content Include="Magaza\themes\css\bootstrap-responsive.min.css" />
+    <Content Include="Magaza\themes\css\font-awesome-ie7.css" />
+    <Content Include="Magaza\themes\css\font-awesome.css" />
+    <Content Include="Magaza\themes\cyborg\bootstrap.min.css" />
+    <Content Include="Magaza\themes\font\fontawesome-webfont.svg" />
+    <Content Include="Magaza\themes\images\carousel\1.png" />
+    <Content Include="Magaza\themes\images\carousel\2.png" />
+    <Content Include="Magaza\themes\images\carousel\3.png" />
+    <Content Include="Magaza\themes\images\carousel\4.png" />
+    <Content Include="Magaza\themes\images\carousel\5.png" />
+    <Content Include="Magaza\themes\images\carousel\6.png" />
+    <Content Include="Magaza\themes\images\carousel\7.png" />
+    <Content Include="Magaza\themes\images\facebook.png" />
+    <Content Include="Magaza\themes\images\headerRepeat.png" />
+    <Content Include="Magaza\themes\images\ico-cart.png" />
+    <Content Include="Magaza\themes\images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Magaza\themes\images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Magaza\themes\images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Magaza\themes\images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Magaza\themes\images\ico\favicon.ico" />
+    <Content Include="Magaza\themes\images\lightbox\Close.png" />
+    <Content Include="Magaza\themes\images\lightbox\lightbox-blank.gif" />
+    <Content Include="Magaza\themes\images\lightbox\lightbox-btn-close.gif" />
+    <Content Include="Magaza\themes\images\lightbox\lightbox-btn-next.gif" />
+    <Content Include="Magaza\themes\images\lightbox\lightbox-btn-prev.gif" />
+    <Content Include="Magaza\themes\images\lightbox\lightbox-ico-loading.gif" />
+    <Content Include="Magaza\themes\images\logo.png" />
+    <Content Include="Magaza\themes\images\new.png" />
+    <Content Include="Magaza\themes\images\payment_methods.png" />
+    <Content Include="Magaza\themes\images\products\1.jpg" />
+    <Content Include="Magaza\themes\images\products\10.jpg" />
+    <Content Include="Magaza\themes\images\products\11.jpg" />
+    <Content Include="Magaza\themes\images\products\12.jpg" />
+    <Content Include="Magaza\themes\images\products\13.jpg" />
+    <Content Include="Magaza\themes\images\products\2.jpg" />
+    <Content Include="Magaza\themes\images\products\3.jpg" />
+    <Content Include="Magaza\themes\images\products\4.jpg" />
+    <Content Include="Magaza\themes\images\products\5.jpg" />
+    <Content Include="Magaza\themes\images\products\6.jpg" />
+    <Content Include="Magaza\themes\images\products\7.jpg" />
+    <Content Include="Magaza\themes\images\products\8.jpg" />
+    <Content Include="Magaza\themes\images\products\9.jpg" />
+    <Content Include="Magaza\themes\images\products\b1.jpg" />
+    <Content Include="Magaza\themes\images\products\b2.jpg" />
+    <Content Include="Magaza\themes\images\products\b3.jpg" />
+    <Content Include="Magaza\themes\images\products\b4.jpg" />
+    <Content Include="Magaza\themes\images\products\kindle.png" />
+    <Content Include="Magaza\themes\images\products\large\3.jpg" />
+    <Content Include="Magaza\themes\images\products\large\f1.jpg" />
+    <Content Include="Magaza\themes\images\products\large\f2.jpg" />
+    <Content Include="Magaza\themes\images\products\large\f3.jpg" />
+    <Content Include="Magaza\themes\images\products\panasonic.jpg" />
+    <Content Include="Magaza\themes\images\search.png" />
+    <Content Include="Magaza\themes\images\tabRepeatInactive.png" />
+    <Content Include="Magaza\themes\images\twitter.png" />
+    <Content Include="Magaza\themes\images\youtube.png" />
+    <Content Include="Magaza\themes\img\glyphicons-halflings-white.png" />
+    <Content Include="Magaza\themes\img\glyphicons-halflings.png" />
+    <Content Include="Magaza\themes\journal\bootstrap.min.css" />
+    <Content Include="Magaza\themes\js\bootshop.js" />
+    <Content Include="Magaza\themes\js\bootstrap.min.js" />
+    <Content Include="Magaza\themes\js\google-code-prettify\prettify.css" />
+    <Content Include="Magaza\themes\js\google-code-prettify\prettify.js" />
+    <Content Include="Magaza\themes\js\jquery.js" />
+    <Content Include="Magaza\themes\js\jquery.lightbox-0.5.js" />
+    <Content Include="Magaza\themes\js\less.js" />
+    <Content Include="Magaza\themes\readable\bootstrap.min.css" />
+    <Content Include="Magaza\themes\simplex\bootstrap.min.css" />
+    <Content Include="Magaza\themes\slate\bootstrap.min.css" />
+    <Content Include="Magaza\themes\spacelab\bootstrap.min.css" />
+    <Content Include="Magaza\themes\spruce\bootstrap.css" />
+    <Content Include="Magaza\themes\spruce\bootstrap.min.css" />
+    <Content Include="Magaza\themes\superhero\bootstrap.min.css" />
+    <Content Include="Magaza\themes\switch\images\clr\amelia.png" />
+    <Content Include="Magaza\themes\switch\images\clr\bootshop.png" />
+    <Content Include="Magaza\themes\switch\images\clr\businessltd.png" />
+    <Content Include="Magaza\themes\switch\images\clr\cerulean.png" />
+    <Content Include="Magaza\themes\switch\images\clr\cyborg.png" />
+    <Content Include="Magaza\themes\switch\images\clr\journal.png" />
+    <Content Include="Magaza\themes\switch\images\clr\readable.png" />
+    <Content Include="Magaza\themes\switch\images\clr\simplex.png" />
+    <Content Include="Magaza\themes\switch\images\clr\slate.png" />
+    <Content Include="Magaza\themes\switch\images\clr\spacelab.png" />
+    <Content Include="Magaza\themes\switch\images\clr\spruce.png" />
+    <Content Include="Magaza\themes\switch\images\clr\superhero.png" />
+    <Content Include="Magaza\themes\switch\images\clr\united.png" />
+    <Content Include="Magaza\themes\switch\images\hideme.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern1.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern10.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern11.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern12.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern13.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern14.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern15.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern16.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern16~.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern17.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern17~.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern18.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern19.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern19~.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern2.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern20.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern20~.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern3.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern4.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern5.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern6.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern7.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern8.png" />
+    <Content Include="Magaza\themes\switch\images\pattern\pattern9.png" />
+    <Content Include="Magaza\themes\switch\images\styleTgl.png" />
+    <Content Include="Magaza\themes\switch\theamswitcher.js" />
+    <Content Include="Magaza\themes\switch\themeswitch.css" />
+    <Content Include="Magaza\themes\united\bootstrap.min.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Entity\Category.cs" />
+    <Compile Include="Entity\DataContext.cs" />
+    <Compile Include="Entity\Datainitializer.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Magaza\themes\font\fontawesome-webfont.eot" />
+    <Content Include="Magaza\themes\font\fontawesome-webfont.ttf" />
+    <Content Include="Magaza\themes\font\fontawesome-webfont.woff" />
+    <Content Include="Magaza\themes\font\museo_slab_300-webfont.eot" />
+    <Content Include="Magaza\themes\font\museo_slab_300-webfont.ttf" />
+    <Content Include="Magaza\themes\font\museo_slab_500-webfont.eot" />
+    <Content Include="Magaza\themes\font\museo_slab_500-webfont.ttf" />
+    <Content Include="Magaza\themes\font\proximanova-webfont.eot" />
+    <Content Include="Magaza\themes\font\proximanova-webfont.ttf" />
+    <Content Include="Magaza\themes\less\accordion.less" />
+    <Content Include="Magaza\themes\less\alerts.less" />
+    <Content Include="Magaza\themes\less\amelia.less" />
+    <Content Include="Magaza\themes\less\amelia\bootswatch.less" />
+    <Content Include="Magaza\themes\less\amelia\variables.less" />
+    <Content Include="Magaza\themes\less\bootshop.less" />
+    <Content Include="Magaza\themes\less\bootshop\main.less" />
+    <Content Include="Magaza\themes\less\bootshop\variables.less" />
+    <Content Include="Magaza\themes\less\bootstrap.less" />
+    <Content Include="Magaza\themes\less\breadcrumbs.less" />
+    <Content Include="Magaza\themes\less\button-groups.less" />
+    <Content Include="Magaza\themes\less\buttons.less" />
+    <Content Include="Magaza\themes\less\carousel.less" />
+    <Content Include="Magaza\themes\less\classified.less" />
+    <Content Include="Magaza\themes\less\close.less" />
+    <Content Include="Magaza\themes\less\code.less" />
+    <Content Include="Magaza\themes\less\component-animations.less" />
+    <Content Include="Magaza\themes\less\dropdowns.less" />
+    <Content Include="Magaza\themes\less\font-awesome-ie7.less" />
+    <Content Include="Magaza\themes\less\font-awesome.less" />
+    <Content Include="Magaza\themes\less\forms.less" />
+    <Content Include="Magaza\themes\less\grid.less" />
+    <Content Include="Magaza\themes\less\hero-unit.less" />
+    <Content Include="Magaza\themes\less\labels-badges.less" />
+    <Content Include="Magaza\themes\less\layouts.less" />
+    <Content Include="Magaza\themes\less\mixins.less" />
+    <Content Include="Magaza\themes\less\modals.less" />
+    <Content Include="Magaza\themes\less\navbar.less" />
+    <Content Include="Magaza\themes\less\navs.less" />
+    <Content Include="Magaza\themes\less\pager.less" />
+    <Content Include="Magaza\themes\less\pagination.less" />
+    <Content Include="Magaza\themes\less\popovers.less" />
+    <Content Include="Magaza\themes\less\progress-bars.less" />
+    <Content Include="Magaza\themes\less\reset.less" />
+    <Content Include="Magaza\themes\less\responsive-1200px-min.less" />
+    <Content Include="Magaza\themes\less\responsive-767px-max.less" />
+    <Content Include="Magaza\themes\less\responsive-768px-979px.less" />
+    <Content Include="Magaza\themes\less\responsive-navbar.less" />
+    <Content Include="Magaza\themes\less\responsive-utilities.less" />
+    <Content Include="Magaza\themes\less\responsive.less" />
+    <Content Include="Magaza\themes\less\scaffolding.less" />
+    <Content Include="Magaza\themes\less\simplex.less" />
+    <Content Include="Magaza\themes\less\simplex\bootswatch.less" />
+    <Content Include="Magaza\themes\less\simplex\variables.less" />
+    <Content Include="Magaza\themes\less\sprites.less" />
+    <Content Include="Magaza\themes\less\tables.less" />
+    <Content Include="Magaza\themes\less\thumbnails.less" />
+    <Content Include="Magaza\themes\less\tooltip.less" />
+    <Content Include="Magaza\themes\less\type.less" />
+    <Content Include="Magaza\themes\less\utilities.less" />
+    <Content Include="Magaza\themes\less\variables.less" />
+    <Content Include="Magaza\themes\less\wells.less" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ProductDetail.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\Index1.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Magaza\themes\less\oregional\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60679</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44324/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
